@@ -1,9 +1,4 @@
-def input_error?(num)
-  if num != num.to_i.to_s
-    abort "Вводить можно только цифры"
-  end
-  return num.to_i
-end
+require_relative 'index.rb'
 
 def find_twenty(num)
   num == 20 ? "num1" : "num2"
