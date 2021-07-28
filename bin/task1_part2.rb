@@ -15,7 +15,7 @@ end
 
 puts "Введите первое число, num1"
 
-n1 = input_error?(gets.chop)
+n1 = input_error(gets.chop)
 
 puts "Введите второе число, num2"
 

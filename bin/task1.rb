@@ -7,7 +7,7 @@ puts "Отлично #{name}!Теперь скажи свою фамилию\n"
 last_name = gets.chop.to_str
 
 print "Отлично #{name}! Теперь скажи свой возраст\n"
-age = input_error?(gets.chop)
+age = input_error(gets.chop)
 
 def old(name, last_name)
 

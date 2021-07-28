@@ -1,4 +1,4 @@
-def input_error?(num)
+def input_error(num)
 
   if num != num.to_i.to_s
     abort "Вводить можно только цифры"

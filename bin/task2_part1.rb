@@ -16,7 +16,7 @@ def end_CS(str)
 end
 
 puts "Введите число"
-n = input_error?(gets.chop)
+n = input_error(gets.chop)
 
 puts "Введите слово"
 word = gets.chop.to_str
