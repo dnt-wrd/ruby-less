@@ -59,7 +59,7 @@ class CashMachine
     end
   end
 
-  def init
+  def cm
     loop do
       print "D - deposit\nW - withdraw\nB - balance\nQ - quit\n\n"
       user_input = gets.chop.upcase
@@ -76,11 +76,15 @@ class CashMachine
       else
         print "Вводить можно только D, W, B, Q в верхнем или нижнем регистре\n\n"
       end
-
       break if user_input == "Q"
     end
   end
+
+  def self.init
+    CashMachine.new.cm
+  end
+
 end
 
 a = CashMachine.new
-a.init
+a.init1
