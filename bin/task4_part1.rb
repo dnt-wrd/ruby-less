@@ -3,10 +3,11 @@ $path = "files/balance.txt"
 START_BALANCE = 100.0
 $balance = 0
 
-if File.exist?($path )
-  $balance = IO.read($path ).to_f
+if File.exist?($path)
+  $balance = IO.read($path).to_f
 else
   $balance  = START_BALANCE
+  $path = "files/balance.txt"
   file = File.new($path , "a:UTF-8")
   file.close
 end
@@ -59,7 +60,7 @@ class CashMachine
     end
   end
 
-  def cm
+  def init
     loop do
       print "D - deposit\nW - withdraw\nB - balance\nQ - quit\n\n"
       user_input = gets.chop.upcase
@@ -72,7 +73,7 @@ class CashMachine
       when "B"
         print "Текущий баланс #{$balance}\n\n"
       when "Q"
-        quit($path )
+        quit($path)
       else
         print "Вводить можно только D, W, B, Q в верхнем или нижнем регистре\n\n"
       end
@@ -80,11 +81,11 @@ class CashMachine
     end
   end
 
-  def self.init
-    CashMachine.new.cm
-  end
+  #def self.init
+  #  CashMachine.new.cm
+  #end
 
 end
 
-a = CashMachine.new
-a.init1
+a = CashMachine.new.init
+#a.init
